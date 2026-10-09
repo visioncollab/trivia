@@ -261,7 +261,7 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;background-im
         </div>
         <div class="terms-block">
           <h3>🕘 Horario y participación</h3>
-          <p>El horario anunciado es <b>de <span id="termsHours">9:00 a. m. a 6:00 p. m.</span></b> (hora de Lima, Perú). La organización habilita y cierra manualmente las rondas desde Google Sheets; fuera de ese horario la participación debe permanecer cerrada.</p>
+          <p><b>Horario de participación: <span id="termsHours">9:00 a. m. a 6:00 p. m.</span></b> (hora de Lima, Perú).</p>
           <p><b>5 preguntas por ronda, 30 segundos por pregunta y 1 intento por ID de Play! Pokémon.</b> <span id="termsFreeNote"> La primera semana es gratuita por inauguración.</span></p>
         </div>
         <div class="terms-block">
@@ -564,7 +564,7 @@ function call(name,params,onSuccess,onFailure){
     setView(`<section class="panel">${head('RONDA TERMINADA','Tu resultado',label())}
       <div class="result-content"><div class="result-icon">${icons.check}</div>
         <h2>${previous?'Ya participaste en esta ronda':`¡Bien jugado, ${safe(attempt?.firstName||state.firstName||'')}!`}</h2>
-        <p class="lead">${previous?'Tu participación ya quedó registrada en Google Sheets.':'Has completado las cinco preguntas. Tus puntos fueron guardados automáticamente.'}</p>
+        <p class="lead">${previous?'Tu participación ya quedó registrada correctamente.':'Has completado las cinco preguntas. Tus puntos fueron guardados automáticamente.'}</p>
         <div class="result-number">${points}<small> / ${state.total*Number(config.points)}</small></div>
         <div class="result-caption">${correct} de ${state.total} respuestas correctas</div>
         <p class="result-note">Vuelve para la siguiente ronda y sigue sumando puntos para competir por el premio de la semana ${safe(config.week)}.</p>
